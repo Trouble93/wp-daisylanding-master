@@ -1,0 +1,2662 @@
+/*
+Theme Name: daisy
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: daisy
+*/
+html {
+    margin: 0 auto;
+}
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+/*.logo {*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*.logo_menu {*/
+/*    gap: 270px;*/
+/*    max-width: 970px;*/
+/*    padding: 0 15px;*/
+/*    margin-top: 31px;*/
+/*    width: 100%;*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    z-index: 3;*/
+/*}*/
+
+.container {
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 0 15px;
+}
+
+.menu {
+    padding-left: 0;
+    list-style: none;
+    gap: 50px;
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 36px;
+    text-align: left;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu a:hover {
+    color: #fc635e;
+}
+
+.menu li a:after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #fc635e;
+    bottom: -8px;
+    left: 0;
+    transition: 0.3s linear;
+}
+
+.menu li a:hover:after {
+    opacity: 1;
+}
+
+.menu li a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header_burger {
+    display: none;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 774px;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    flex: 1;
+}
+
+@media (max-width: 330px) {
+    .header_burger {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 850px) {
+    .scroll-portfolio {
+        bottom: -5%;
+    }
+
+}
+
+/*.bg {*/
+/*    background: #181818;*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    opacity: 0.7;*/
+/*}*/
+
+.main-text-big {
+    display: flex;
+    gap: 12px;
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro Bold", sans-serif;
+    font-size: 51px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 36px;
+    text-align: left;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.main-text-big span {
+    color: #fc635e;
+}
+
+.clients:before {
+    display: flex;
+    content: url("assets/images/line.svg");
+    width: 107px;
+    height: 8px;
+    align-items: center;
+}
+
+.clients::after {
+    display: flex;
+    content: url("assets/images/line.svg");
+    width: 107px;
+    height: 8px;
+    align-items: center;
+}
+
+/*.text-hero {*/
+/*    color: #ffffff;*/
+/*    font-family: "PF Encore Sans Pro Light", sans-serif;*/
+/*    font-size: 24px;*/
+/*    font-weight: 300;*/
+/*    font-style: normal;*/
+/*    letter-spacing: normal;*/
+/*    text-align: center;*/
+/*    z-index: 3;*/
+/*}*/
+
+.hero-button {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    width: fit-content;
+    padding: 12px 33px;
+    border-radius: 8px;
+    color: #fc635e;
+    border: 2px solid #fc635e;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    z-index: 3;
+    background-color: Transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+.hero-button::after {
+    pointer-events: none;
+    display: flex;
+    position: absolute;
+    content: url(assets/images/mouse.svg);
+    z-index: 4;
+    right: auto;
+    top: 12%;
+    left: 105%;
+}
+
+.hero-button:hover {
+    background-color: white;
+}
+
+.scroll {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hero-scroll {
+    bottom: 3%;
+    position: absolute;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider.svg) no-repeat;
+    z-index: 3;
+    align-content: flex-end;
+}
+
+@media (max-width: 970px) {
+    .logo_menu {
+        gap: 0;
+    }
+
+    .clients {
+        font-size: 42px !important;
+    }
+
+    .clients:before {
+        display: none;
+
+    }
+
+    .clients:after {
+        display: none;
+    }
+}
+
+@media (max-width: 840px) {
+    .logo_menu {
+        gap: 0 !important;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo_menu {
+        gap: 80px !important;
+    }
+
+    @media (max-width: 600px) {
+        .header_burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 5;
+        }
+
+        .menu a:hover {
+            color: white;
+        }
+
+        .menu li a:hover:after {
+            opacity: 0;
+        }
+
+
+        .header_burger.active:before {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+
+        .header_burger.active:after {
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+
+        .header_burger.active span {
+            display: none;
+        }
+
+        .header_burger:before, .header_burger:after {
+            content: "";
+            position: absolute;
+            background: white;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            z-index: 5;
+            transition: 0.2s linear;
+        }
+
+        .header_burger:before {
+            top: 0;
+        }
+
+        .header_burger:after {
+            bottom: 0;
+        }
+
+        .hero-menu {
+            position: absolute;
+            top: -31px;
+            right: -100%;
+            transition: 0.5s linear;
+            background-color: #fc635e;
+            width: 50%;
+            height: 100vh;
+        }
+
+        .hero-menu.active {
+            position: fixed;
+            right: 0;
+            top: -31px;
+        }
+
+        .logo_menu {
+            flex-direction: row;
+        }
+
+        .header_burger span {
+            position: absolute;
+            background: white;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: 0.2s linear;
+        }
+    }
+    .logo_menu {
+        width: 100%;
+    }
+
+    .menu {
+        padding-left: 30px;
+        gap: 15px;
+        font-size: 22px;
+        flex-direction: column;
+    }
+
+    .clients {
+        font-size: 36px !important;
+    }
+
+    .text-hero {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 530px) {
+    .menu {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .logo_menu {
+        justify-content: space-between;
+
+        gap: 0;
+    }
+
+    .clients {
+        flex-direction: column;
+        text-align: center !important;
+    }
+
+    .hero-button:after {
+        display: none;
+    }
+
+    .menu {
+        gap: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo_menu {
+
+    }
+
+    .hero-menu {
+        align-items: center;
+    }
+}
+
+/*.service-section {*/
+/*    position: relative;*/
+/*    margin-top: 67px;*/
+/*}*/
+
+/*.service-title {*/
+/*    max-width: 342px;*/
+/*    position: relative;*/
+/*    color: #868686;*/
+/*    font-family: "PF Encore Sans Pro Medium", sans-serif;*/
+/*    font-size: 28px;*/
+/*    font-weight: 500;*/
+/*    font-style: normal;*/
+/*    letter-spacing: normal;*/
+/*    line-height: 26px;*/
+/*    text-align: center;*/
+/*    text-transform: uppercase;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.service-title:after {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    width: 100%;*/
+/*    height: 1px;*/
+/*    background-color: #adadad;;*/
+/*    bottom: -11px;*/
+/*    left: 0;*/
+/*}*/
+
+/*.main-text-med span {*/
+/*    color: #fc635e;*/
+/*}*/
+
+/*.service-subtitle {*/
+/*    color: #adadad;*/
+/*    max-width: 505px;*/
+/*    font-family: "PF Encore Sans Pro - Thin", sans-serif;*/
+/*    font-size: 20px;*/
+/*    font-weight: 300;*/
+/*    font-style: normal;*/
+/*    letter-spacing: normal;*/
+/*    line-height: 26px;*/
+/*    text-align: center;*/
+/*    margin: 24px auto;*/
+/*}*/
+
+.service-block {
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.service-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 202px;
+    margin: 0 auto;
+
+}
+
+.service-image:hover .white_image {
+    display: block;
+    transition: 0.3s linear !important;
+}
+
+@media (min-width: 800px) {
+    .service-image:hover .red_image {
+        display: none;
+    }
+}
+
+.service-image {
+    width: 102px;
+    height: 116px;
+    transition: 0.3s linear !important;
+}
+
+.white_image {
+    display: none;
+}
+
+.service-name {
+    position: relative;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.service-name:after {
+    max-width: 59px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;;
+    bottom: -11px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.service-text {
+    color: #adadad;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 18px;
+    text-align: center;
+}
+
+.scroll-services {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+}
+
+@media (max-width: 850px) {
+    .service-block {
+        display: flex;
+        /*flex-wrap: wrap;*/
+    }
+
+    .service-image .white_image {
+        display: none !important;
+        pointer-events: none;
+    }
+
+    .white_image {
+        display: none;
+    }
+
+    .service-item {
+        margin-top: 20px;
+        padding: 0 10px;
+
+    }
+}
+
+@media (max-width: 450px) {
+
+    .service-title {
+        font-size: 20px;
+    }
+
+
+    .service-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .scroll-team {
+        left: 47%;
+    }
+}
+
+.expand-bg {
+    background: #131313;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7;
+
+}
+
+.border {
+    opacity: 0.1;
+    border: 8px solid #ffffff;
+    z-index: 4;
+    width: 940px;
+    height: 384px;
+    position: absolute;
+}
+
+.expand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 576px;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 51px;
+}
+
+.expand-button {
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    width: fit-content;
+    padding: 12px 60px;
+    border-radius: 8px;
+    color: #fc635e;
+    border: 2px solid #fc635e;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    z-index: 4;
+    background-color: Transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+.expand-button:hover {
+    background-color: white;
+}
+
+.expand-scroll {
+    bottom: 3%;
+    position: absolute;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider.svg) no-repeat;
+    z-index: 3;
+    align-content: flex-end;
+}
+
+@media (max-width: 950px) {
+    .expand-bg {
+        background-position: center;
+    }
+
+    .border {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .expand-content {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 450px) {
+    .expand-content {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.process-title {
+    position: relative;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26.02px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.process-title span {
+    color: #fc635e;
+}
+
+.process {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.process-subtitle {
+    margin: 20px auto;
+    max-width: 505px;
+    color: #adadad;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26.02px;
+    text-align: center;
+}
+
+.process-photo {
+    width: 100%;
+    margin-top: 9px;
+    margin-bottom: 54px;
+}
+
+.process-scroll {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+
+}
+
+.process-title:after {
+    max-width: 186px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Light';
+    src: local('PF Encore Sans Pro Light'), local('PF-Encore-Sans-Pro-Light'),
+    url('assets/fonts/PFEncoreSansPro-Light.woff2') format('woff2'),
+    url('assets/fonts/PFEncoreSansPro-Light.woff') format('woff'),
+    url('assets/fonts/PFEncoreSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.landing-pages {
+    padding: 0 15px;
+    position: relative;
+    height: 576px;
+    background-color: #f2f2f2;
+}
+
+.land_pages_title {
+    position: relative;
+    padding-top: 60px;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26.02px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.land_pages_title span {
+    color: #fc635e;
+}
+
+.land_pages_title:after {
+    max-width: 230px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.landing-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 39px;
+    max-width: 372px;
+    color: #9e9898;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: left;
+}
+
+.land_pages_subtitle {
+    margin-top: 40px;
+    margin-bottom: 0;
+    display: flex;
+    position: relative;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 21px;
+}
+
+.land_pages_subtitle::before {
+    width: 10px;
+    position: absolute;
+    height: 35px;
+    left: -6%;
+    bottom: 0;
+
+
+    content: url('assets/images/Прямоугольник_7.svg');
+
+}
+
+.land-button {
+    margin-top: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #fc635e;
+    color: #f2f2f2;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    width: fit-content;
+    padding: 8px 31px;
+    background-color: #fc635e;
+    transition: 0.3s linear;
+    text-decoration: none;
+}
+
+.land-button:hover {
+    color: #fc635e;
+    background: white;
+}
+
+.land-image {
+    padding: 0 15px;
+    margin-left: 42px;
+}
+
+.landing-scroll {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 17px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+}
+
+.landing-content {
+    margin-top: 77px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .landing-text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .land-image {
+        padding: 0 15px;
+        margin-left: 0;
+    }
+
+    .landing-scroll {
+        top: 95%;
+    }
+
+    .landing-content {
+        flex-direction: column-reverse;
+        padding: 30px 0;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .devices {
+        justify-content: center;
+        max-width: 506px;
+        object-fit: cover;
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+    }
+
+    .devices img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .landing-pages {
+        height: 100%;
+    }
+
+    .landing-scroll {
+        bottom: 0;
+    }
+
+    .land-button {
+        margin-bottom: 30px;
+    }
+}
+
+.tising-content {
+    display: flex;
+}
+
+.tising {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+    height: 578px;
+    margin-top: 0;
+
+}
+
+.tising-subtitle {
+    margin-top: 0;
+    max-width: 372px;
+    color: #9e9898;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: right;
+}
+
+.tising-title {
+
+    position: relative;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: right;
+    text-transform: uppercase;
+    margin-right: 23px;
+
+}
+
+.tising-title::after {
+    width: 10px;
+    position: absolute;
+    height: 35px;
+    display: flex;
+    content: url('assets/images/Прямоугольник_7.svg');
+    right: -6%;
+    bottom: 0;
+}
+
+.tising-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    margin-top: 31px;
+    border-radius: 6px;
+    border: 1px solid #fc635e;
+    color: #f2f2f2;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    width: fit-content;
+    padding: 7px 33px;
+    background-color: #fc635e;
+    transition: 0.3s linear;
+    text-decoration: none;
+}
+
+.tising-button:hover {
+    color: #fc635e;
+    background: white;
+}
+
+.tising-img {
+    margin-right: 42px;
+}
+
+.tising-scroll {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+}
+
+@media (max-width: 1000px) {
+    .tising-content {
+        flex-direction: column;
+        padding: 30px 0;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .tising-text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .tising-scroll {
+        top: 94%;
+    }
+
+    .tising-image {
+        padding: 0 15px;
+        justify-content: center;
+        object-fit: cover;
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+    }
+
+    .tising img {
+
+        max-width: 503px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .tising {
+        height: 100%;
+    }
+
+
+    .tising-button {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .devices {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .land_pages_subtitle {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .tising-title {
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    .land_pages_subtitle::before {
+        display: none;
+    }
+
+    .tising-title::after {
+        display: none;
+    }
+
+    .marketing-title::before {
+        display: none !important;
+    }
+
+    .land_pages_text {
+        text-align: left;
+    }
+
+    .landing-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .land-button {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .landing-content {
+        margin-top: 0;
+    }
+
+    .landing-scroll {
+        bottom: 0;
+    }
+
+    .tising-img {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tising-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tising-button {
+        margin: 20px auto;
+    }
+
+    .tising-subtitle {
+        text-align: left;
+    }
+
+    .tising-content {
+        margin-top: 0;
+    }
+
+    .tising-scroll {
+        bottom: 0;
+    }
+
+    /* block with book*/
+    .book {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .marketing-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marketing-content {
+        margin-top: 0;
+    }
+
+    .marketing-scroll {
+        bottom: 0;
+    }
+}
+
+.marketing-content {
+    margin-top: 22px;;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.marketing-kit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+    height: 576px;
+    background-color: #f2f2f2;
+}
+
+.marketing-subtitle {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 39px;
+    max-width: 372px;
+    color: #9e9898;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: left;
+}
+
+.marketing-title {
+    margin-top: 40px;
+    margin-bottom: 0;
+    display: flex;
+    position: relative;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 21px;
+}
+
+.marketing-title::before {
+    width: 10px;
+    position: absolute;
+    height: 35px;
+    left: -6%;
+    bottom: 0;
+    content: url('assets/images/Прямоугольник_7.svg');
+
+}
+
+.marketing-button {
+    margin-top: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #fc635e;
+    color: #f2f2f2;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    width: fit-content;
+    padding: 10px 31px;
+    background-color: #fc635e;
+    transition: 0.3s linear;
+    text-decoration: none;
+}
+
+.marketing-button:hover {
+    color: #fc635e;
+    background: white;
+}
+
+.book {
+    padding: 0 15px;
+    margin-left: 42px;
+}
+
+.marketing-scroll {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+}
+
+@media (max-width: 1000px) {
+    .marketing-content {
+        flex-direction: column-reverse;
+        padding: 30px 0;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .marketing-text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .marketing-scroll {
+        top: 94%;
+    }
+
+    .book {
+        padding: 0 15px;
+        justify-content: center;
+        object-fit: cover;
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+    }
+
+    .book img {
+
+        max-width: 503px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .marketing-kit {
+        height: 100%;
+    }
+
+    .marketing-scroll {
+        bottom: 0;
+    }
+
+    .marketing-button {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .book {
+        width: 100%;
+    }
+}
+
+.portfolio {
+    margin-bottom: 60px;
+    padding: 0 15px;
+    position: relative;
+    padding-top: 40px;
+}
+
+.main-portfolio {
+    position: relative;
+    color: #868686;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26.02px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-portfolio:after {
+    max-width: 142px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-menu {
+    position: relative;
+    margin: 63px auto;
+    max-width: 1079px;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 73px;
+    padding-left: 15px;
+}
+
+.main-menu:before {
+    max-width: 970px;;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;;
+    bottom: 45px;
+    left: 51%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+}
+
+.main-menu > li:last-child .slash {
+    display: none;
+}
+
+.main-menu:after {
+    padding: 0 10px;
+
+    max-width: 970px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;;
+    bottom: -15px;
+    left: 51%;
+    transform: translateX(-50%);
+
+}
+
+.menu-port {
+    cursor: pointer;
+    color: #fc635e;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu-port span {
+    color: #747474;
+    font-style: normal;
+    letter-spacing: -0.1px;
+    line-height: normal;
+    margin-left: 45px;
+}
+
+.image-name {
+    padding-top: 20px;
+    padding-left: 20px;
+    position: absolute;
+
+    height: 21px;
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro Bold", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: left;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.plus {
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 46px;
+    height: 44px;
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro", sans-serif;
+    font-size: 104px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 135.76px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.bike::after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;;
+    background-color: #fc635e;
+    transition: 0.3s linear !important;
+}
+
+.bike:hover .image-name {
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.bike:hover .plus {
+    cursor: pointer;
+    transition: 0.3s linear !important;
+    position: absolute;
+    opacity: 1;
+    z-index: 3;
+}
+
+.bike:hover::after {
+    opacity: 0.78;
+    z-index: 0;
+}
+
+.paints::after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fc635e;
+    transition: 0.3s linear !important;
+}
+
+.paints:hover .image-name {
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.paints:hover .plus {
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.paints:hover::after {
+    opacity: 0.78;
+    z-index: 0;
+}
+
+.bus::after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fc635e;
+    transition: 0.3s linear !important;
+}
+
+.bus:hover .image-name {
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.bus:hover .plus {
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.bus:hover::after {
+    opacity: 0.78;
+    z-index: 0;
+}
+
+.letters::after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fc635e;
+    transition: 0.3s linear !important;
+}
+
+.letters:hover .image-name {
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.letters:hover .plus {
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.letters:hover::after {
+    opacity: 0.78;
+    z-index: 0;
+}
+
+.boxes::after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fc635e;
+    transition: 0.3s linear !important;
+}
+
+.boxes:hover .image-name {
+    position: absolute;
+    opacity: 1;
+    z-index: 3;
+}
+
+.boxes:hover .plus {
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.boxes:hover::after {
+    opacity: 0.78;
+    z-index: 0;
+}
+
+.cars::after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fc635e;
+    transition: 0.3s linear !important;
+}
+
+.cars:hover .image-name {
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.cars:hover .plus {
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s linear !important;
+    opacity: 1;
+    z-index: 3;
+}
+
+.cars:hover::after {
+    opacity: 0.78;
+    z-index: 0;
+}
+
+.bike {
+    position: relative;
+    grid-area: bike;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s linear;
+}
+
+.paints {
+    position: relative;
+    grid-area: paints;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s linear;
+}
+
+.bus {
+    position: relative;
+    grid-area: bus;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s linear;
+}
+
+.boxes {
+    position: relative;
+    grid-area: boxes;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s linear;
+}
+
+.letters {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-area: letters;
+    transition: 0.3s linear;
+}
+
+.cars {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-area: cars;
+    transition: 0.3s linear;
+}
+
+.images-port {
+    gap: 11px;
+    justify-content: space-between;
+    max-width: 938px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    'bike bike paints bus'
+    'boxes letters cars cars';
+    padding-bottom: 70px;
+}
+
+.port-img {
+    height: 100%;
+}
+
+.portfolio-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    text-align: center;
+    width: fit-content;
+    padding: 10px 13px;
+    background-color: #fc635e;
+    border-radius: 6px;
+    border: 1px solid #fc635e;
+    transition: 0.3s linear;
+    text-decoration: none;
+}
+
+
+.portfolio-button:hover {
+    cursor: pointer;
+    color: #fc635e;
+    background: white;
+}
+
+.scroll-portfolio {
+    left: 50%;
+    bottom: -6%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+}
+
+.hide {
+    opacity: 1;
+    animation-duration: 1s;
+    animation-name: a1;
+    animation-fill-mode: forwards;
+}
+
+
+@media (max-width: 970px) {
+    .menu-port {
+        padding-right: 10px;
+        max-width: 800px;
+        gap: 10px;
+    }
+    .cars:hover .image-name {
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }   .bike:hover .image-name {
+            position: absolute;
+            transition: 0.3s linear !important;
+            opacity: 0;
+            z-index: 3;
+        }
+    .bus:hover .image-name {
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+    .letters:hover .image-name {
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+    .boxes:hover .image-name {
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+    .paints:hover .image-name {
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+
+    .cars:hover .plus {
+        cursor: pointer;
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .cars:hover::after {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .paints:hover .plus {
+        cursor: pointer;
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .paints:hover::after {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .bike:hover .plus {
+        cursor: pointer;
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .bike:hover::after {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .boxes:hover .plus {
+        cursor: pointer;
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .boxes:hover::after {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .letters:hover .plus {
+        cursor: pointer;
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .letters:hover::after {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .bus:hover .plus {
+        cursor: pointer;
+        position: absolute;
+        transition: 0.3s linear !important;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .bus:hover::after {
+        opacity: 0;
+        z-index: 0;
+    }
+
+
+    .block8-portfolio {
+        padding-bottom: 5px;
+    }
+
+    .portfolio {
+        bottom: 15px;
+    }
+
+    .slash {
+        display: none;
+    }
+
+    .images-port {
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+        grid-auto-rows: 238px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+    'bike bike paints'
+    'bus boxes letters'
+    'cars cars -';
+    }
+
+    .port-items {
+        height: 100%;
+    }
+
+    .port-img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 800px) {
+    .images-port{
+    overflow: hidden;
+    }
+    .scroll-portfolio {
+        bottom: -5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-portfolio {
+        bottom: -3% !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .main-menu {
+        gap: 45px !important;
+    }
+
+
+    .main-menu:before {
+        max-width: 630px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .main-menu:after {
+        max-width: 630px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .images-port {
+        max-width: 600px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        'bike bike'
+        'paints bus'
+        'boxes letters'
+        'cars cars ';
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .main-menu {
+        width: 100%;
+        justify-content: center;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .main-menu {
+        width: 100%;
+        justify-content: center;
+        gap: 25px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .main-menu {
+        gap: 10px !important;
+        padding-left: 0;
+    }
+
+    .menu-port {
+        font-size: 14px !important;
+    }
+
+    .scroll-portfolio {
+        bottom: -5% !important;
+
+    }
+
+    .menu-port {
+        width: 100%;
+        font-size: 18px;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .main-menu {
+        gap: 5px;
+    }
+
+    .menu-port {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-port {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-menu {
+        gap: 0 !important;
+    }
+
+    .menu-port {
+        width: 100%;
+        justify-content: center;
+        font-size: 12px !important;
+
+    }
+
+    .scroll-portfolio {
+        bottom: -4% !important;
+    }
+
+    .images-port {
+        width: 100%;
+        grid-template-columns:1fr;
+        grid-template-areas:
+    'bike'
+    'paints'
+    ' bus'
+    'boxes'
+    'letters'
+    'cars';
+    }
+
+    .port-img {
+        max-height: 238px;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    .port-items {
+        width: 100%;
+    }
+}
+
+.team-block {
+    position: relative;
+    padding: 0 15px;
+    height: 577px;
+    background-color: #f2f2f2;
+}
+
+.team-title {
+    margin-bottom: 86px;
+    padding-top: 50px;
+    position: relative;
+    color: #565656;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26.02px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-title span {
+    color: #fc635e;
+}
+
+.team-title:after {
+    max-width: 142px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.teammates {
+    display: flex;
+    max-width: 940px;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.team-workers {
+    flex: 1 0 250px;
+}
+
+.worker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+
+}
+
+.worker img {
+    max-width: 147px;
+    max-height: 171px;
+}
+
+.links {
+    display: flex;
+    gap: 17px;
+}
+
+@media (max-width: 380px) {
+    .links {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 987px) {
+    .main-menu {
+        gap: 107px;
+    }
+
+    .menu-port {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 330px) {
+    .main-menu {
+        gap: 5px;
+        font-size: 10px;
+    }
+}
+
+.scroll-team {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(assets/images/slider2.png) no-repeat;
+}
+
+.worker-title {
+    color: #565656;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+}
+
+.worker-title span {
+    margin-right: 8px;
+    color: #fc635e;
+}
+
+.worker-subtitle {
+    margin-top: -20px;
+    font-family: "PF Encore Sans Pro - Thin", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.1px;
+}
+
+.twitter:hover {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.twitter {
+    transition: 0.3s linear;
+}
+
+.facebook:hover {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.facebook {
+    transition: 0.3s linear;
+}
+
+.linked {
+    transition: 0.3s linear;
+}
+
+.linked:hover {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+@media (max-width: 750px) {
+    .teammates {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    .slider-team {
+        top: 93%;
+    }
+
+    .team-block {
+        height: 100%;
+    }
+
+    .worker {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 550px) {
+    .teammates {
+        flex-wrap: wrap;
+    }
+
+    .team-block {
+        height: 100%;
+    }
+
+    .worker {
+        justify-content: start;
+        padding-bottom: 0;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .teammates {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 70px;
+    }
+
+    .worker {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width: 330px) {
+    .teammates {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .scroll-team {
+        top: 92%;
+    }
+
+    .team-title {
+        margin-bottom: 20px;
+    }
+}
+
+.employees {
+    max-height: 645px;
+    padding: 0 15px;
+}
+
+.employees-head-image {
+    display: flex;
+    margin: 56px auto;
+}
+
+.employees-images {
+    align-items: center;
+    display: flex;
+    margin: -40px 145px 0 0;
+    justify-content: center;
+    gap: 70px;
+}
+
+.owl-theme .owl-nav {
+    margin-top: 0;
+}
+
+.employees-text {
+    max-width: 400px;
+    color: #767676;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 21px;
+    text-align: right;
+    margin-bottom: 6px;
+
+}
+
+.owl-theme .owl-nav {
+    margin-top: 0;
+}
+
+.arrows {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.employees-name {
+    color: #818181;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.employees-name span {
+    color: #fc635e;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -0.14px;
+    line-height: normal;
+    margin-right: 10px;
+}
+
+.employees-description {
+    color: #818181;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 41px;
+    text-align: left;
+
+}
+
+.employees-item {
+    align-items: center;
+    margin: 0 auto;
+    max-width: 969px;
+    display: flex;
+    height: 300px;
+}
+
+.block-width {
+    width: 323px;
+}
+
+.photo-item {
+    max-width: 160px;
+    max-height: 185px;
+    margin: 0 auto;
+}
+
+.employees-images .owl-nav button:hover {
+    background: none !important;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    margin-left: 15px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    margin-right: 15px;
+}
+
+.employees-text {
+    text-align: left;
+}
+
+@media (max-width: 850px) {
+    .alan-main-content {
+        flex-direction: column-reverse;
+        gap: 40px;
+        margin: 0 auto;
+    }
+
+    .employees-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 10px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        margin-top: 30px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        margin-top: 30px;
+    }
+
+    .employees-description {
+        display: flex;
+        justify-content: center;
+    }
+
+    .employees-text {
+        width: 323px;
+        text-align: left;
+    }
+
+    .employees-name {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 330px) {
+    .employees-text {
+        width: 312px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1550px) {
+    .button1::after {
+        left: 58%
+    }
+}
+
+@media (max-width: 1330px) {
+    .button1::after {
+        left: 59%
+    }
+}
+
+@media (max-width: 1200px) {
+    .button1::after {
+        left: 60%
+    }
+}
+
+@media (max-width: 1050px) {
+    .button1::after {
+        left: 62%
+    }
+}
+
+@media (max-width: 900px) {
+    .button1::after {
+        left: 63%
+    }
+}
+
+@media (max-width: 850px) {
+    .button1::after {
+        display: none;
+    }
+}
+
+.contacts {
+    height: 338px;
+    position: relative;
+}
+
+.gmap-img {
+    object-fit: cover;
+    height: 100%;
+    margin-top: 165px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.text-logo-map {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: -81px;
+}
+
+.second-fon {
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    position: absolute;
+    z-index: 4;
+}
+
+.main-fon {
+    top: -34%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 3;
+}
+
+.logo-name {
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro Medium", sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 20.96px;
+    text-align: right;
+    z-index: 5;
+    margin-bottom: 14px;
+}
+
+.address {
+    max-width: 161px;
+    color: #ffffff;
+    font-family: "PF Encore Sans Pro Light", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 20.96px;
+    text-align: left;
+    z-index: 5;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro - Thin';
+    src: local('PF Encore Sans Pro Thin'), local('PF-Encore-Sans-Pro-Thin'),
+    url('assets/fonts/PFEncoreSansPro-Thin.woff2') format('woff2'),
+    url('assets/fonts/PFEncoreSansPro-Thin.woff') format('woff'),
+    url('assets/fonts/PFEncoreSansPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Bold';
+    src: local('PF Encore Sans Pro Bold'), local('PF-Encore-Sans-Pro-Bold'),
+    url('assets/fonts/PFEncoreSansPro-Bold.woff2') format('woff2'),
+    url('assets/fonts/PFEncoreSansPro-Bold.woff') format('woff'),
+    url('assets/fonts/PFEncoreSansPro-Bold.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Regular';
+    src: local('PF Encore Sans Pro Regular'), local('PF-Encore-Sans-Pro-Regular'),
+    url('assets/fonts/PFEncoreSansPro-Regular.woff2') format('woff2'),
+    url('assets/fonts/PFEncoreSansPro-Regular.woff') format('woff'),
+    url('assets/fonts/PFEncoreSansPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Medium';
+    src: local('PF Encore Sans Pro Medium'), local('PF-Encore-Sans-Pro-Medium'),
+    url('assets/fonts/PFEncoreSansPro-Medium.woff2') format('woff2'),
+    url('assets/fonts/PFEncoreSansPro-Medium.woff') format('woff'),
+    url('assets/fonts/PFEncoreSansPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Encore Sans Pro Light';
+    src: local('PF Encore Sans Pro Light'), local('PF-Encore-Sans-Pro-Light'),
+    url('assets/fonts/PFEncoreSansPro-Light.woff2') format('woff2'),
+    url('assets/fonts/PFEncoreSansPro-Light.woff') format('woff'),
+    url('assets/fonts/PFEncoreSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.footer-bg {
+    background: #181818;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 212px;
+    line-height: 36px;
+    background-image: url(assets/images/Слой_19.svg);
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 185px;
+    height: 90px;
+    z-index: 2;
+
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+
